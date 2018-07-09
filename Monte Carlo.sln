@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monte Carlo", "randomData_Gen\Monte Carlo.csproj", "{1F529CC9-F53F-46D0-B6B9-38463C29D6F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monte Carlo", "Monte Carlo\Monte Carlo.csproj", "{1F529CC9-F53F-46D0-B6B9-38463C29D6F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
