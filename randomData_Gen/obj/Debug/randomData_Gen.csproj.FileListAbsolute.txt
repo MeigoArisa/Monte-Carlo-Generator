@@ -1,0 +1,9 @@
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\randomData_Gen.csprojResolveAssemblyReference.cache
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\randomData_Gen.Properties.Resources.resources
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\randomData_Gen.csproj.GenerateResource.Cache
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\bin\Debug\randomData_Gen.exe.config
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\bin\Debug\randomData_Gen.exe
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\bin\Debug\randomData_Gen.pdb
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\randomData_Gen.exe
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\randomData_Gen.pdb
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\randomData_Gen.DataGenerator.resources

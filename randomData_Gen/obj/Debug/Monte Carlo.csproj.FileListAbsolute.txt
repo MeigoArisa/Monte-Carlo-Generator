@@ -1,0 +1,8 @@
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\bin\Debug\Monte_Carlo.exe.config
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\bin\Debug\Monte_Carlo.exe
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\bin\Debug\Monte_Carlo.pdb
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\Monte_Carlo.DataGenerator.resources
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\Monte_Carlo.Properties.Resources.resources
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\Monte Carlo.csproj.GenerateResource.Cache
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\Monte_Carlo.exe
+c:\users\김강현\documents\visual studio 2017\Projects\randomData_Gen\randomData_Gen\obj\Debug\Monte_Carlo.pdb
