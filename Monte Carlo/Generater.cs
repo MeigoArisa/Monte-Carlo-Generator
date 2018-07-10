@@ -10,15 +10,7 @@
 //  Made by kimkanghyune
 /**********************************************************************/
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -72,6 +64,11 @@ namespace Monte_Carlo
 
 
             MessageBox.Show("완료");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("E-mail: wwponv158@gmail.com\r\nMade by KimKanghyune", "Information",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
