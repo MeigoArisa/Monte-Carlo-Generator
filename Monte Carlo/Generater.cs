@@ -1,4 +1,14 @@
-﻿
+﻿/**********************************************************************/
+//
+//                  Monte Carlo Algorithm Example
+//
+//
+//
+//
+//
+//  E-mail : wwponv158@gmail.com
+//  Made by kimkanghyune
+/**********************************************************************/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

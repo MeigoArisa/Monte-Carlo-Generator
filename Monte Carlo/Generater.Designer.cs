@@ -33,6 +33,7 @@
             this.SpeedCheck = new System.Windows.Forms.CheckBox();
             this.DistanceCheck = new System.Windows.Forms.CheckBox();
             this.IntervalCheck = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -55,6 +56,8 @@
             // SpeedCheck
             // 
             this.SpeedCheck.AutoSize = true;
+            this.SpeedCheck.Checked = true;
+            this.SpeedCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SpeedCheck.Location = new System.Drawing.Point(12, 43);
             this.SpeedCheck.Name = "SpeedCheck";
             this.SpeedCheck.Size = new System.Drawing.Size(89, 19);
@@ -65,6 +68,8 @@
             // DistanceCheck
             // 
             this.DistanceCheck.AutoSize = true;
+            this.DistanceCheck.Checked = true;
+            this.DistanceCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DistanceCheck.Location = new System.Drawing.Point(12, 68);
             this.DistanceCheck.Name = "DistanceCheck";
             this.DistanceCheck.Size = new System.Drawing.Size(89, 19);
@@ -75,6 +80,8 @@
             // IntervalCheck
             // 
             this.IntervalCheck.AutoSize = true;
+            this.IntervalCheck.Checked = true;
+            this.IntervalCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.IntervalCheck.Location = new System.Drawing.Point(12, 93);
             this.IntervalCheck.Name = "IntervalCheck";
             this.IntervalCheck.Size = new System.Drawing.Size(89, 19);
@@ -82,11 +89,21 @@
             this.IntervalCheck.Text = "위빙간격";
             this.IntervalCheck.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(176, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Info";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // DataGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 124);
+            this.ClientSize = new System.Drawing.Size(284, 127);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.IntervalCheck);
             this.Controls.Add(this.DistanceCheck);
             this.Controls.Add(this.SpeedCheck);
@@ -109,6 +126,7 @@
         private System.Windows.Forms.CheckBox SpeedCheck;
         private System.Windows.Forms.CheckBox DistanceCheck;
         private System.Windows.Forms.CheckBox IntervalCheck;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -18,7 +18,7 @@ namespace Monte_Carlo
 
         public static string strFilePath = "";
         string strSeperator = ",";
-
+        
 
 
         //double 형의 난수를 생성하기 위한 메소드
@@ -54,7 +54,7 @@ namespace Monte_Carlo
                 for (int i = 0; i < NumOfThread; i++)
                 {
                     threads[i] = new Thread(Work_speed);
-                    threads[i].Start(i);
+                    threads[i].Start(i);    
                 }
 
                 Process currentProcess = Process.GetCurrentProcess();
