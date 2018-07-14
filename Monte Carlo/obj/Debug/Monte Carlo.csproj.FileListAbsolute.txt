@@ -15,3 +15,30 @@ C:\Users\김강현\Documents\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_C
 C:\Users\김강현\Documents\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte Carlo.csproj.GenerateResource.Cache
 C:\Users\김강현\Documents\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_Carlo.exe
 C:\Users\김강현\Documents\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_Carlo.pdb
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Monte_Carlo.exe.config
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Monte_Carlo.exe
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Monte_Carlo.pdb
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte Carlo.csprojResolveAssemblyReference.cache
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_Carlo.DataGenerator.resources
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_Carlo.Properties.Resources.resources
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte Carlo.csproj.GenerateResource.cache
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte Carlo.csproj.CoreCompileInputs.cache
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_Carlo.exe
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte_Carlo.pdb
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\BenchmarkDotNet.Core.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\BenchmarkDotNet.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\BenchmarkDotNet.Toolchains.Roslyn.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Microsoft.CodeAnalysis.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\System.Collections.Immutable.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\System.Reflection.Metadata.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\BenchmarkDotNet.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\BenchmarkDotNet.Core.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\BenchmarkDotNet.Toolchains.Roslyn.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Microsoft.CodeAnalysis.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\System.Collections.Immutable.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\System.Reflection.Metadata.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\nucle\Source\Repos\Monte-Carlo-Generator\Monte Carlo\obj\Debug\Monte Carlo.csproj.CopyComplete
