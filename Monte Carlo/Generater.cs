@@ -13,6 +13,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Monte_Carlo.benchmarkclass;
 
 namespace Monte_Carlo
 {
@@ -37,9 +38,16 @@ namespace Monte_Carlo
             {
                 di.Create();
             }
-
             RandomDataGen Making = new RandomDataGen();
             RandomDataGen.strFilePath = dir + $"\\{ DateTime.Now.ToString("yyyy - MM - dd - HH - mm - ss")} -";
+
+            CStopWatch speedWatch = new CStopWatch();
+            CStopWatch weavingWatch = new CStopWatch();
+            CStopWatch intervalWatch = new CStopWatch();
+            
+            long SpeedElapsedTime;
+            long WeavingElapsedTime;
+            long IntervalElapsedTime;
 
             Task<int> speedfile = null;
             Task<int> intervaltestfile = null;
@@ -47,22 +55,41 @@ namespace Monte_Carlo
 
             if (SpeedCheck.CheckState == CheckState.Checked)
             {
+                speedWatch.Start();
                 speedfile = Making.speedfile(Convert.ToInt32(textBox1.Text));
             }
             if (DistanceCheck.CheckState == CheckState.Checked)
             {
-                intervaltestfile = Making.intervaltestfile(Convert.ToInt32(textBox1.Text));
+                weavingWatch.Start();
+                Weavingtestfile = Making.Weavingtestfile(Convert.ToInt32(textBox1.Text));
             }
             if (IntervalCheck.CheckState == CheckState.Checked)
             {
-                Weavingtestfile = Making.Weavingtestfile(Convert.ToInt32(textBox1.Text));
+                intervalWatch.Start();
+                intervaltestfile = Making.intervaltestfile(Convert.ToInt32(textBox1.Text));
             }
 
-            await speedfile;
-            await intervaltestfile;
-            await Weavingtestfile;
 
-
+            if (speedfile != null)
+            {
+                await speedfile;
+                SpeedElapsedTime = speedWatch.GetElapsedTime(CStopWatch.TIME_UNIT.MICROSECOND, true); //타임끝
+                label1.Text = SpeedElapsedTime.ToString() + " μs";
+            }
+            if (Weavingtestfile != null)
+            {
+                await Weavingtestfile;
+                WeavingElapsedTime = weavingWatch.GetElapsedTime(CStopWatch.TIME_UNIT.MICROSECOND, true); //타임끝
+                label2.Text = WeavingElapsedTime.ToString() + " μs";
+            }
+            if (intervaltestfile != null)
+            {
+                await intervaltestfile;
+                IntervalElapsedTime = intervalWatch.GetElapsedTime(CStopWatch.TIME_UNIT.MICROSECOND, true); //타임끝
+                label3.Text = IntervalElapsedTime.ToString() + " μs";
+            }
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
             MessageBox.Show("완료");
         }
 
