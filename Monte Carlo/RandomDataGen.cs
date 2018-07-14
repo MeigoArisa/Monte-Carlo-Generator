@@ -1,6 +1,8 @@
-﻿using System;
+﻿
+using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,37 +10,32 @@ namespace Monte_Carlo
 {
     class RandomDataGen
     {
-        int speedvalue = 0;
-        int Weavingvalue = 0;
-        int intervalvalue = 0;
-        Random rand = new Random();
+        int speedvalue =0;
+        int Weavingvalue =0;
+        int intervalvalue =0;
 
         public static string strFilePath = "";
         string strSeperator = ",";
         
-
-
         //double 형의 난수를 생성하기 위한 메소드
         //min값이 max값이 넘지 않는지 체크 후 난수결과값 리턴
-        double NextDouble(double min, double max)
+        public double NextDouble(double min, double max, Random seed)
         {
+            Random random = seed;
             if (min == max)
             {
-                return max;
+                return min;
             }
             if (min > max)
             {
                 throw new ArgumentOutOfRangeException();
             }
-            else if (min == max)
-                return max;
-            return rand.NextDouble() * (Math.Abs(max - min)) + min;
+            double returnsum = (random.NextDouble() * (Math.Abs(max - min)) + min);
+            random = null;
+            return returnsum;
         }
 
 
-
-
-        
         public async Task<int> speedfile(int value)
         {
             speedvalue = value;
@@ -68,21 +65,34 @@ namespace Monte_Carlo
             });
             return 0;
         }
-
-        private void Work_speed(object threadId)
+        class Point
         {
-            double[] xCoords = new double[speedvalue];
-            double[] yCoords = new double[speedvalue];
+            public double X;
+            public double Y;
+        }
 
-            string FilePath = strFilePath+"testfilespeed.csv";
-            
-
-            for (var i = 0; i < speedvalue; i++)
+        public void Work_speed(object threadId)
+        {
+            Point pos = new Point();
+            string FilePath = strFilePath + "testfilespeed.csv";
+            string Output = null;
+            StringBuilder sbAddress = new StringBuilder();
+            unsafe
             {
-                xCoords[i] = NextDouble(0.01, 65);
-                yCoords[i] = NextDouble((Math.Pow(0.97, xCoords[i]) * (500)) - 50, Math.Pow(0.97, xCoords[i]) * (500) + 50);
-                File.AppendAllText(FilePath, string.Join(strSeperator, xCoords[i].ToString(), yCoords[i].ToString(), Environment.NewLine));
+                for (int i = 0; i < speedvalue; i++)
+                {
+                    pos.X = NextDouble(0.0000001, 65, new Random(-500 + i));
+                    pos.Y = NextDouble((Math.Pow(0.97, pos.X) * (500)) - 50, Math.Pow(0.97, pos.X) * (500) + 50, new Random(1 * i));
+                    fixed (double* fixedX = &pos.X, fixedY = &pos.Y)
+                    {
+                        sbAddress.Append(string.Join(strSeperator, *fixedX, *fixedY, Environment.NewLine));
+                    }
+                }
             }
+            Output = sbAddress.ToString();
+            File.AppendAllText(FilePath, Output);
+            sbAddress = null;
+            Output = null;
         }
 
         public async Task<int> intervaltestfile(int value)
@@ -114,20 +124,31 @@ namespace Monte_Carlo
             });
             return 0;
         }
-
-
-        public void Work_interval(object threadId)
+        
+        public unsafe void Work_interval(object threadId)
         {
-            double[] xCoords = new double[intervalvalue];
-            double[] yCoords = new double[intervalvalue];
             string FilePath = strFilePath + "intervaltestfile.csv";
+            Point pos = new Point();
+            string Output = null;
+            StringBuilder sbAddress = new StringBuilder();
 
-            for (var i = 0; i < intervalvalue; i++)
+            unsafe
             {
-                xCoords[i] = NextDouble(0.01, 60);
-                yCoords[i] = NextDouble((-xCoords[i]) / 12 + 30, (-xCoords[i]) / 12 + 40);
-                File.AppendAllText(FilePath, string.Join(strSeperator, xCoords[i].ToString(), yCoords[i].ToString(), Environment.NewLine));
+                for (var i = 0; i < intervalvalue; i++)
+                {
+                    pos.X = NextDouble(0.0000001, 60, new Random(-30+i));
+                    pos.Y = NextDouble((-pos.X) / 12 + 30, (-pos.X) / 12 + 40, new Random(1 * i));
+                    fixed (double* fixedX = &pos.X, fixedY = &pos.Y)
+                    {
+                        sbAddress.Append(string.Join(strSeperator, *fixedX, *fixedY, Environment.NewLine));
+                    }
+                }
             }
+
+            Output = sbAddress.ToString();
+            File.AppendAllText(FilePath, Output);
+            sbAddress = null;
+            Output = null;
         }
 
 
@@ -161,19 +182,30 @@ namespace Monte_Carlo
 
             return 0;
         }
-
-        public void Work_Weaving(object threadId)
+        
+        public unsafe void Work_Weaving(object threadId)
         {
-            double[] xCoords = new double[Weavingvalue];
-            double[] yCoords = new double[Weavingvalue];
             string FilePath = strFilePath + "Weavingtestfile.csv";
+            Point pos = new Point();
+            string Output = null;
+            StringBuilder sbAddress = new StringBuilder();
 
-            for (var i = 0; i < Weavingvalue; i++)
+            unsafe
             {
-                xCoords[i] = NextDouble(0.01, 60);
-                yCoords[i] = NextDouble((Math.Pow(xCoords[i], 2) * 0.25) - 7, ((Math.Pow(xCoords[i], 2) * 0.25) + 7));
-                File.AppendAllText(FilePath, string.Join(strSeperator, xCoords[i].ToString(), yCoords[i].ToString(), Environment.NewLine));
+                for (var i = 0; i < Weavingvalue; i++)
+                {
+                    pos.X = NextDouble(0.0000001, 60, new Random(-7+i));
+                    pos.Y = NextDouble((Math.Pow(pos.X, 2) * 0.25) - 7, ((Math.Pow(pos.X, 2) * 0.25) + 7), new Random(1 * i));
+                    fixed (double* fixedX = &pos.X, fixedY = &pos.Y)
+                    {
+                        sbAddress.Append(string.Join(strSeperator, *fixedX, *fixedY, Environment.NewLine));
+                    }
+                }
             }
+            Output = sbAddress.ToString();
+            File.AppendAllText(FilePath, Output);
+            sbAddress = null;
+            Output = null;
         }
     }
 }
