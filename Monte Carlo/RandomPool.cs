@@ -98,7 +98,7 @@ namespace Monte_Carlo
 
         public Double NextDouble(Double minRange, Double maxRange)
         {
-            return NextDoubleImpl() * (Math.Abs(maxRange - minRange) + minRange);
+            return NextDoubleImpl() * (Math.Abs(maxRange - minRange)) + minRange;
         }
     }
 }
